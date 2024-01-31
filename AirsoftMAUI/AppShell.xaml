@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AirsoftMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:AirsoftMAUI.MVVM.Views"
+    FlyoutBehavior="Flyout">
+
+    
+    <TabBar FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Productos"
+        ContentTemplate="{DataTemplate pages:ProductsView}"
+        Route="ProductsView"/>
+
+    </TabBar>
+    <ShellContent
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LogingPage"/>
+
+    <ShellContent
+        FlyoutItemIsVisible="False"
+    
+        ContentTemplate="{DataTemplate pages:RegisterView}"
+        Route="RegisterView"/>
+    <ShellContent
+        Title="Perfil"
+        ContentTemplate="{DataTemplate pages:PerfilView}"
+        Route="PerfilView"/>
+
+</Shell>
